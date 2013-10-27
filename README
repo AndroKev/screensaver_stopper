@@ -1,1 +1,9 @@
-Hello World
+Hello,
+This is a simple Script, which you can use to temp. stopp your 
+screensaver.
+
+Depenties:
+xdotool
+arecord
+
+To use it you only have to call it, for example with a 5min cronjob
