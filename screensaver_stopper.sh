@@ -5,12 +5,11 @@
 ########################################################################
 
 for i in {1..5}; do
-	if [ `arecord -f cd -d 1 -V mono /dev/null 2>&1 | grep -c 00%` -eq 0 ]; then
+	if [ `arecord -d 1 -c 2 -f S16_LE -r 44100 -t wav -D default --vumeter=mono /dev/null 2>&1 | grep -c 00%` -eq 0 ]; then
 		state=0
 		break
 	fi
 	state=1
-	echo "$state"
 done
 
 if [ "$state" -eq 1 ]; then
