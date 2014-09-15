@@ -3,7 +3,15 @@ This is a simple Script, which you can use to temp. stopp your
 screensaver.
 
 Depenties:
-xdotool
-arecord
+xdotool - to simulate a mouseclick
+arecord - to record the internal sound and look if there is something playing
 
-To use it you only have to call it, for example with a 5min cronjob
+First Setup:
+
+Call 'alsamixer' and press F4 to switch to the caputre devices.
+Switch the input device to line and the capure-vol to max.
+Last step is to adjust the Line boost(but not to max because this makes the playback craggeling)
+
+To use it you only have to call it, for example with a 5min cronjob.
+
+
